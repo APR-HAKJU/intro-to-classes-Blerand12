@@ -15,13 +15,15 @@ Der Einkaufswagen soll:
 
 # TODO 1: Erstelle die Klasse Artikel mit passendem Konstruktor
 class Artikel:
-    """
-    Ein einzelner Artikel im Einkaufswagen.
+    def __init__(self, name, preis):
+        self.name = name
+        self.preis = preis
+        print(f"{name} wurde hinzugefügt!")
+    def zeige_info():
+        print(f"- {name}: {preis} EUR")
     
-    Attribute:
-    - name (str): Name des Artikels
-    - preis (float): Preis des Artikels
-    """
+
+
     # TODO 1.1: Schreibe den Konstruktor __init__
     # Parameter: self, name, preis
     # Speichere name und preis als Attribute
@@ -34,11 +36,22 @@ class Artikel:
 
 # TODO 2: Erstelle die Klasse Einkaufswagen
 class Einkaufswagen:
-    """
-    Ein Einkaufswagen der Artikel-Objekte verwaltet.
+    def __init__(self):
+        self.artikel = []
     
-    Attribute:
-    - artikel (list): Liste von Artikel-Objekten
+    def hinzufuegen(self, artikel):
+        self.artikel.append(artikel)
+        print(f"{artikel.name} hinzugefügt")
+
+    def gesamtpreis(self):
+        self.artikel.preis += artikel.preis
+
+        return artikel.preis
+    
+    def anzahl_artikel():
+    
+
+ 
     """
     
     # TODO 2.1: Schreibe den Konstruktor __init__
