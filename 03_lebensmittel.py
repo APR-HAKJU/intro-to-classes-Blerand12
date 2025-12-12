@@ -65,20 +65,30 @@ class Einkaufswagen:
     # Keine Parameter außer self
     # Berechne die Summe aller Preise (artikel.preis)
     # Gib die Summe zurück (return)
-    
+    def gesamtpreis(self):
+        summe= 0
+        for a in self.artikel:
+            summe = summe + a.preis
+        return summe  
+
 
     
     # TODO 2.4: Schreibe die Methode anzahl_artikel()
     # Keine Parameter außer self
     # Gib die Anzahl der Artikel zurück (len(self.artikel))
-    
+    def anzahl_artikel(self):
+        return (len(self.artikel))
     
     # TODO 2.5: Schreibe die Methode zeige_inhalt()
     # Keine Parameter außer self
     # Gib aus: "Einkaufswagen ({anzahl} Artikel):"
     # Für jeden Artikel: Rufe artikel.zeige_info() auf
     # Gib aus: "Gesamtpreis: {gesamtpreis} EUR"
-    
+    def zeige_inhalt(self):
+        print(f"Anzahl der Aritkel {self.anzahl_artikel()} ")
+        for a in self.artikel:
+            a.zeige_info()
+        print(f"Gesamtsumme {self.gesamtpreis()} EUR")
 
 
 # TODO 3.1: Erstelle drei Artikel-Objekte
@@ -102,9 +112,11 @@ wagen.hinzufuegen(artikel1)
 wagen.hinzufuegen(artikel2)
 wagen.hinzufuegen(artikel3)
 
+print(wagen.anzahl_artikel())
+
 # TODO 3.4: Zeige den Inhalt des Wagens
 # wagen.zeige_inhalt()
-pass
+wagen.zeige_inhalt()
 
 """
 Erwartetes Ergebnis:
